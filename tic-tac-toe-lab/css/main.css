@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+
+
+* {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --green-color: rgb(56, 151, 60);
+    --swedish-green: #004b87;
+    --swedish-yellow: #ffcd00;
+    --dark-color: #111;
+    --light-color: #ddd;
+  }
+
+  html {
+    margin: 0;
+    color: var(--light-color);
+  }
+
+  h1 {
+    margin: 1rem auto;
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-family: monospace;
+    color: var(--swedish-yellow);
+  }
+
+  body {
+    height: 100%;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 10vmin);
+    grid-template-rows: repeat(3, 10vmin);
+    grid-gap: 10vmin;
+  }
+
+  .cell {
+    text-align: center;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  .disabledCell {
+    cursor: not-allowed;
+    pointer-events: none;
+    font-size: 80px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  section.grid-container div {
+    border-radius: 50%;
+    border: 3px solid var(--swedish-yellow);
+    width: 100px;
+    height: 100px;
+  }
+
+  #btnReset {
+    width: 200px;
+    height: 100px;
+    margin: 10% auto;
+    border: 3px solid var(--swedish-yellow);
+    color: var(--light-color);
+    border-radius: 10%;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  #btnReset:hover {
+    background-color: var(--swedish-yellow);
+    color: var(--dark-color);
+  }
+
+  #msg {
+    display: block;
+    width: 100vh;
+    margin: 0 10px;
+  }
